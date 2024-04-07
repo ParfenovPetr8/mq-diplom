@@ -362,6 +362,7 @@ body {
 
 .search {
   display: flex;
+  margin: 59px 0;
 }
 
 .field-search {
@@ -373,8 +374,7 @@ body {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.541);
   background-color: rgb(244, 247, 246);
-  padding: 0 19px;
-  margin: 59px 0;
+  padding: 0 19px;  
 }
 
 .field-search:focus {
@@ -388,8 +388,7 @@ body {
   width: 48px;
   height: 48px;
   border: none;
-  text-indent: -9999px;
-  margin: 59px 0;
+  text-indent: -9999px;  
 }
 
 .button-search::before {
@@ -881,7 +880,7 @@ body {
 /*Burger*/
 @media (max-width: 1200px) {  
   .menu-button-mini {
-    position: relative;
+    position: absolute;
     width: 33px;
     height: 22px;    
     border: none;
@@ -889,6 +888,8 @@ body {
     background-color: transparent;
     text-indent: -9999px;
     cursor: pointer;
+    right: 36px;
+    top: 50px;
 }
 
 .menu-button-mini:before, .menu-button-mini:after {
@@ -939,34 +940,44 @@ body {
     width: 100%;
     min-height: 390px;
     background-image: url("../images/banner-bg-tablet.jpg"); 
-}
+  }
   
   .container {    
     min-height: 79px;   
     padding: 43px 35px 0px 35px;    
- }
+  }
   
   .header-title {  
-    padding: 100px 0px 125px;
-}  
-  
+    padding: 100px 0px 125px;  
+    font-size: 40px;
+    line-height: 1.375;  
+  }
+
   .top {
     width: 100%;
     margin-bottom: 50px;
   }
+
+  .section-trend-title::after {    
+    left: calc(100% / 2 - 30px);
+  }
    
+  .article-trend-title-link {
+    font-size: 17px;    
+  }
+
   .section-trend-posts {    
     display: flex;
     flex-wrap: wrap;    
-}  
+  }  
  
   .section-trend-post {   
     width: calc(100% / 2 - 50px);
-}
+  }
   
   .main-aside {
     margin: 0px 35px;    
-}
+  }
   
   .main {    
     margin-right: 4.5%;
@@ -981,13 +992,17 @@ body {
   .article-post-image {
     width: 100%;
     max-height: 90%;
-}
+  }
   
   .article-post-content { 
     width: 100%;
     padding: 15px 0px 25px;
     border-bottom: 4px solid #eeeeee;
-}
+  }
+
+  .article-title-link {
+    font-size: 17px;    
+  }
   
   .sidebar {
     flex-shrink: 0;
@@ -996,36 +1011,39 @@ body {
   .product {
     margin: 0px 35px;    
   }
-  
-  .product-title::after {    
-    left: 46%;
-  }
 
+  .product-title::after {
+    left: calc(100% / 2 - 30px);
+  }
+  
   .section-products {
     display: flex;
     gap: 0px;
     flex-wrap: wrap;    
-}
+  }
 
   .article-product {    
-    width: 45%;
+    width: calc(100% / 2 - 45px);
     margin-bottom: 70px;
     padding-left: 45px;    
   }  
-  
-  
+    
   .article-product__image {
     width: 90%;
-    height: 100%;
+    height: auto;
   }
   
   .product__details {
     width: 90%;
   }
+
+  .product__title-link {
+    font-size: 17px;    
+  }
   
   .footer {    
     margin: 0px 35px;
-}
+  }
   
 }
 
@@ -1037,7 +1055,7 @@ body {
 } 
 
   .section-trend-post {
-    width: 25%;
+    width: calc(100% / 4 - 50px);
 }
  
 }
@@ -1068,38 +1086,43 @@ body {
   }  
 
   .menu {
-    position: relative;
+    position: static;
   }
 
-  .menu::after {
-    content: "";
-    position: absolute;
-    top: 110px;
-    left: 110px;
-    z-index: 1;
+  .header-logo {
+    width: 265px;
   }
    
   .header-title {
     width: 280px;
-    font-size: 16px;
-    min-height: 90px;
-    padding: 0px;
-    margin: 0px auto;    
-}  
+    font-size: 26px;    
+    line-height: 1.385;           
+    min-height: 90px;    
+    padding: 0px;        
+  }  
     
   .top {  
     width: 100%;
-}
+  }
 
-.section-trend-title::after {  
-  left: 45%;
-}
+  .section-trend-title {    
+    font-size: 16px;    
+    line-height: 1.2;    
+  }
+
+  .article-trend-title-link {
+    font-size: 16px;    
+  }
+
+  .section-trend-title::after {  
+  left: calc(100% / 2 - 30px);
+  }
    
   .section-trend-posts {  
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-}  
+  }  
   
   .section-trend-post {
     width: 100%;
@@ -1107,14 +1130,14 @@ body {
   
   .article-trend-content {
     width: 100%;
-}
+  }
   
    .main-aside {
     display: flex;
     flex-wrap: wrap;    
     max-width: 100%;
     margin: 45px 15px;    
-}
+  }
   
   .main {
     width: 100%;
@@ -1130,28 +1153,43 @@ body {
   .article-post-image {
     width: 100%;
     max-height: 90%;
-}
+  }
   
   .article-post-content { 
     width: 100%;
     padding: 15px 0px 25px;
     border-bottom: 4px solid #eeeeee;
-}
+  }
+
+  .article-title-link {
+    font-size: 16px;    
+  }
+
+  .post-text {
+    font-size: 14px;
+    color: #0f0d0e;
+    line-height: 1.429;
+  }
   
   .sidebar { 
     flex-grow: 1;
     flex-shrink: 1;
     width: 100%;
     margin-top: 45px; 
-} 
+  } 
   
-.section-title::after {  
-  left: 43%;
-}
+  .section-title {    
+    font-size: 16px;
+    line-height: 1.429;    
+  }
+
+  .section-title::after {  
+  left: calc(100% / 2 - 35px);
+  }
 
   .section-post-content {  
     width: 100%;  
-}
+  }  
   
   .field-search {
     width: 100%;
@@ -1164,14 +1202,14 @@ body {
   .button-email {
     width: 100%;
   }
-  
+   
   .product {
     width: 100%;
-    margin: 0px 15px;
+    margin: 0px;
   }
 
   .product-title::after {    
-    left: 44%;
+    left: calc(100% / 2 - 30px);
   }
 
   .section-products {
@@ -1188,12 +1226,16 @@ body {
   
   
   .article-product__image {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: auto;
   }
   
   .product__details {
-    width: 90%;
+    width: 100%;
+  }
+
+  .product__title-link {
+    font-size: 17px;    
   }
   
   .footer {

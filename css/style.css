@@ -1094,7 +1094,7 @@ body {
   }
    
   .header-title {
-    width: 280px;
+    max-width: 280px;
     font-size: 26px;    
     line-height: 1.385;           
     min-height: 90px;    
